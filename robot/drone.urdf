@@ -1,0 +1,1124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="天枢无人机完整版(更换悬垂式绝缘子串)">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0056639771301763 -0.00134731271915367 0.0702241127731673"
+        rpy="0 0 0" />
+      <mass
+        value="15.5706568501186" />
+      <inertia
+        ixx="0.215414174888409"
+        ixy="0.000278965471209891"
+        ixz="-0.00186579798298417"
+        iyy="0.224533906302343"
+        iyz="1.77413210485548E-05"
+        izz="0.429245074683622" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="1">
+    <inertial>
+      <origin
+        xyz="-2.18862918899276E-08 -0.00804070005533797 -0.00139434557130169"
+        rpy="0 0 0" />
+      <mass
+        value="0.0508946786646442" />
+      <inertia
+        ixx="0.000263321204860883"
+        ixy="-2.42222727838335E-12"
+        ixz="-4.66870910590625E-11"
+        iyy="0.000523219743897087"
+        iyz="-3.28177959619532E-12"
+        izz="0.00026332115357949" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="1"
+    type="continuous">
+    <origin
+      xyz="0.39801181319172 0.426956015274735 0.0914999999999999"
+      rpy="1.5707963267949 0 -1.57079632679475" />
+    <parent
+      link="base_link" />
+    <child
+      link="1" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="2">
+    <inertial>
+      <origin
+        xyz="-0.00695929857129052 7.13681735931004E-09 2.57415195825672E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0508946554035406" />
+      <inertia
+        ixx="0.000523219735527815"
+        ixy="1.14226034753333E-12"
+        ixz="-1.33751266789222E-12"
+        iyy="0.000263321115471615"
+        iyz="-1.42567386661376E-11"
+        izz="0.000263321240771242" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="2"
+    type="continuous">
+    <origin
+      xyz="0.399152490052173 -0.428301544040019 0.0923957166002727"
+      rpy="2.35619449019233 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="2" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="3">
+    <inertial>
+      <origin
+        xyz="-0.00695929858515365 -2.64612012301768E-08 4.11723721782664E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.050894655322681" />
+      <inertia
+        ixx="0.000523219735550462"
+        ixy="1.20457405117404E-12"
+        ixz="1.30665136478316E-12"
+        iyy="0.00026332124634991"
+        iyz="1.30506364178981E-14"
+        izz="0.000263321109908357" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="3"
+    type="continuous">
+    <origin
+      xyz="-0.443308180062504 -0.414363977979495 0.0923957166002727"
+      rpy="2.35619449019235 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="3" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="4">
+    <inertial>
+      <origin
+        xyz="-0.00695929584813859 1.88181177307456E-08 -2.26012226711703E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0508946319074963" />
+      <inertia
+        ixx="0.000523219728033246"
+        ixy="-1.74400167731045E-12"
+        ixz="-5.65365572246874E-12"
+        iyy="0.000263321200379504"
+        iyz="6.80459033032804E-11"
+        izz="0.000263321159387942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="4"
+    type="continuous">
+    <origin
+      xyz="-0.442610993890112 0.413969330865671 0.0923957166002722"
+      rpy="0.785398163397452 -1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="4" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="5">
+    <inertial>
+      <origin
+        xyz="0.144795665239061 0.257150797737949 0.0199999999999971"
+        rpy="0 0 0" />
+      <mass
+        value="0.455776218277649" />
+      <inertia
+        ixx="0.00691725946687118"
+        ixy="-0.00636893195519381"
+        ixz="2.85797305553749E-18"
+        iyy="0.00927127810409844"
+        iyz="-4.49677265803772E-17"
+        izz="0.0154507286560157" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="5"
+    type="revolute">
+    <origin
+      xyz="-0.0460595704533526 0.177397574044211 0.00689571660027211"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="6">
+    <inertial>
+      <origin
+        xyz="0.257150797745167 -0.144795665239046 -0.019999999994436"
+        rpy="0 0 0" />
+      <mass
+        value="0.455776218277701" />
+      <inertia
+        ixx="0.00927127810409887"
+        ixy="0.00636893195519493"
+        ixz="-1.3382921404693E-13"
+        iyy="0.00691725946687352"
+        iyz="1.3795967542169E-13"
+        izz="0.0154507286560185" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.498039215686275 0.498039215686275 0.498039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="6"
+    type="revolute">
+    <origin
+      xyz="-0.0460595704533526 -0.177602425949055 0.00689571660027255"
+      rpy="1.5707963267949 0 -1.57079632677324" />
+    <parent
+      link="base_link" />
+    <child
+      link="6" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="1.5"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="7">
+    <inertial>
+      <origin
+        xyz="-0.00518953951345091 0.000213254721365352 -0.035276578696477"
+        rpy="0 0 0" />
+      <mass
+        value="1.88126194298808" />
+      <inertia
+        ixx="0.00273527132230292"
+        ixy="1.77334098910453E-05"
+        ixz="-4.14699357694929E-05"
+        iyy="0.00233499112607025"
+        iyz="-1.40297385011527E-06"
+        izz="0.00477956452382518" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/7.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/7.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="7"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="7" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left1">
+    <inertial>
+      <origin
+        xyz="-0.0111305702885858 0.00175951144768671 -0.0123684702565541"
+        rpy="0 0 0" />
+      <mass
+        value="0.0547316689777221" />
+      <inertia
+        ixx="1.55715731374161E-05"
+        ixy="5.54144035585034E-07"
+        ixz="1.33292927466637E-11"
+        iyy="1.06963607207301E-05"
+        iyz="-1.20457650871386E-07"
+        izz="9.05426049838966E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left1"
+    type="revolute">
+    <origin
+      xyz="-0.0081809698807207 0.0747462999182131 -0.0867000000000466"
+      rpy="2.16481869010751 -1.5707963267949 0" />
+    <parent
+      link="7" />
+    <child
+      link="left1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left2">
+    <inertial>
+      <origin
+        xyz="-0.0115986613278967 0.0266205298831679 -0.0491503722298878"
+        rpy="0 0 0" />
+      <mass
+        value="0.0547564759284413" />
+      <inertia
+        ixx="4.67388102378788E-05"
+        ixy="1.3990472400995E-07"
+        ixz="-3.55518682419387E-06"
+        iyy="2.08276957918643E-05"
+        iyz="-3.30106425850116E-08"
+        izz="3.25119016261485E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.788235294117647 0.152941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left2"
+    type="revolute">
+    <origin
+      xyz="-0.0130003002202224 -0.0285682951474495 -0.0213067819846184"
+      rpy="0 0 0" />
+    <parent
+      link="left1" />
+    <child
+      link="left2" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left3">
+    <inertial>
+      <origin
+        xyz="-0.0267729836230384 0.00178211096422665 0.0295901039318975"
+        rpy="0 0 0" />
+      <mass
+        value="0.0884386460096471" />
+      <inertia
+        ixx="2.56993113881633E-05"
+        ixy="-3.08725723289E-07"
+        ixz="1.20530068513804E-07"
+        iyy="3.98092479266022E-05"
+        iyz="-2.35147987835718E-06"
+        izz="2.29369947916602E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left3"
+    type="revolute">
+    <origin
+      xyz="-0.0238290721760328 0 -0.102260753712737"
+      rpy="-1.56824627328209 -0.253209594931779 0.00982319679465262" />
+    <parent
+      link="left2" />
+    <child
+      link="left3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left4">
+    <inertial>
+      <origin
+        xyz="-0.0196195190232213 0.0083225974186889 -0.026751163388905"
+        rpy="0 0 0" />
+      <mass
+        value="0.109463337954737" />
+      <inertia
+        ixx="2.62679338581446E-05"
+        ixy="1.20444321627135E-07"
+        ixz="1.20488836898622E-11"
+        iyy="1.81085209967735E-05"
+        iyz="-1.20444321560814E-07"
+        izz="2.62679338581317E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.372549019607843 0.372549019607843 0.372549019607843 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left4"
+    type="revolute">
+    <origin
+      xyz="-0.0930483982792047 -0.00711575489511063 -0.000407588876633724"
+      rpy="2.91683299009748 -7.48178176021535E-05 -0.000327254879380054" />
+    <parent
+      link="left3" />
+    <child
+      link="left4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left5">
+    <inertial>
+      <origin
+        xyz="0.000914509119384732 -0.00141161226684416 -0.0496926752409594"
+        rpy="0 0 0" />
+      <mass
+        value="0.0948535729433167" />
+      <inertia
+        ixx="3.37489358901451E-05"
+        ixy="-3.72631202742513E-06"
+        ixz="-1.29269810245278E-07"
+        iyy="5.59876539102133E-05"
+        iyz="-4.12119015816723E-08"
+        izz="3.81423158626685E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/left5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left5"
+    type="revolute">
+    <origin
+      xyz="-0.0639503002202071 0.0166451948372313 -0.0285000000001077"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="left4" />
+    <child
+      link="left5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right1">
+    <inertial>
+      <origin
+        xyz="0.0108347313424062 0.00107345800019232 0.0109962279832425"
+        rpy="0 0 0" />
+      <mass
+        value="0.051064355433959" />
+      <inertia
+        ixx="9.2610454211151E-06"
+        ixy="-6.0526081935307E-07"
+        ixz="-1.79357837776929E-07"
+        iyy="1.0429881423121E-05"
+        iyz="5.24315151774219E-07"
+        izz="1.55300846334902E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right1"
+    type="revolute">
+    <origin
+      xyz="-0.00129703085052268 -0.0750648658792512 -0.0867000000000471"
+      rpy="3.14159265358979 0 -1.90195747809308" />
+    <parent
+      link="7" />
+    <child
+      link="right1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right2">
+    <inertial>
+      <origin
+        xyz="0.0332816031976488 0.0509247906754489 1.91803442550764E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0551862370184134" />
+      <inertia
+        ixx="2.08285725055855E-05"
+        ixy="3.49257437766193E-12"
+        ixz="-1.43759149369858E-07"
+        iyy="3.16750215085852E-05"
+        iyz="1.82925167526403E-14"
+        izz="4.75798112813515E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right2"
+    type="revolute">
+    <origin
+      xyz="0.0302366957271776 -0.0225589059368687 0.0130003002202215"
+      rpy="2.90985547269087 0 1.90042236058184" />
+    <parent
+      link="right1" />
+    <child
+      link="right2" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right3">
+    <inertial>
+      <origin
+        xyz="-0.0299884317011641 -0.0270934639260232 0.00180001650795258"
+        rpy="0 0 0" />
+      <mass
+        value="0.0888684070903819" />
+      <inertia
+        ixx="2.29379301778999E-05"
+        ixy="1.2053006853888E-07"
+        ixz="-2.35173711184267E-06"
+        iyy="2.57013719194439E-05"
+        iyz="-3.08725723284362E-07"
+        izz="3.98112496485195E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.372549019607843 0.372549019607843 0.372549019607843 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right3"
+    type="revolute">
+    <origin
+      xyz="0 0.105000000000001 -0.000347732242787835"
+      rpy="1.0858616765511 0.0107493388918891 -3.14159265358979" />
+    <parent
+      link="right2" />
+    <child
+      link="right3" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right4">
+    <inertial>
+      <origin
+        xyz="-0.0266988366111232 -0.00832259741875463 0.0196242188030467"
+        rpy="0 0 0" />
+      <mass
+        value="0.10946333795469" />
+      <inertia
+        ixx="2.62679338581321E-05"
+        ixy="-1.2044432156583E-07"
+        ixz="1.20488876372475E-11"
+        iyy="1.81085209967732E-05"
+        iyz="1.20444321626738E-07"
+        izz="2.62679338581441E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right4"
+    type="revolute">
+    <origin
+      xyz="-0.00800197913154488 -0.0930436984996756 0.00479675672471203"
+      rpy="1.57046062832646 -0.224759675734561 0" />
+    <parent
+      link="right3" />
+    <child
+      link="right4" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="right5">
+    <inertial>
+      <origin
+        xyz="0.049692675940459 -0.000680275941578934 -0.00153824588022466"
+        rpy="0 0 0" />
+      <mass
+        value="0.0948535760591597" />
+      <inertia
+        ixx="3.81423169355529E-05"
+        ixy="-1.34153879059844E-07"
+        ixz="2.0294796758655E-08"
+        iyy="3.31414074030805E-05"
+        iyz="7.50926994848224E-08"
+        izz="5.65951846506223E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/right5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right5"
+    type="revolute">
+    <origin
+      xyz="-0.0249499999998886 -0.016645194837313 0.0639550000000018"
+      rpy="1.7292731935093 -1.5707963267949 0" />
+    <parent
+      link="right4" />
+    <child
+      link="right5" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="zhua">
+    <inertial>
+      <origin
+        xyz="0.0861446200944542 3.59821962288009E-05 -0.296701714708119"
+        rpy="0 0 0" />
+      <mass
+        value="0.71404703355286" />
+      <inertia
+        ixx="0.000269454360042233"
+        ixy="-2.55582429850638E-06"
+        ixz="1.95406726400544E-06"
+        iyy="0.000459932926446992"
+        iyz="-5.2314389601894E-07"
+        izz="0.000513682029067747" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/zhua.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.517647058823529 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/zhua.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="zhua"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="zhua" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.1"
+      upper="0.01"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="dianxiangan">
+    <inertial>
+      <origin
+        xyz="-1.81494127742216 6.46874657430851 -2.11012459137265"
+        rpy="0 0 0" />
+      <mass
+        value="462.033883515964" />
+      <inertia
+        ixx="1815.84018959405"
+        ixy="-7.83880511291899E-06"
+        ixz="0.00035945044608968"
+        iyy="1797.33759619044"
+        iyz="0.000775801895712111"
+        izz="21.2686276508581" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/dianxiangan.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://天枢无人机完整版(更换悬垂式绝缘子串)/meshes/dianxiangan.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dianxiangan"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="dianxiangan" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
