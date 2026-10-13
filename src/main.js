@@ -12,6 +12,7 @@ $('.move-help').textContent='键盘控制已启用 · W/S → Y · A/D → Z · 
 const movementByCode={KeyW:['Y',1],KeyS:['Y',-1],KeyA:['Z',1],KeyD:['Z',-1],KeyQ:['X',1],KeyE:['X',-1]};
 const movementByKey={w:movementByCode.KeyW,s:movementByCode.KeyS,a:movementByCode.KeyA,d:movementByCode.KeyD,q:movementByCode.KeyQ,e:movementByCode.KeyE};
 const heldMovementKeys=new Map();
+const heldKeyStartedAt=new Map(),releaseGuards=new Map();
 let heldMotionSteps=0;
 queueMicrotask(()=>{
   $('#keyboardHint').textContent='键盘控制已启用 · W/S 纵向 · A/D 高度 · Q/E 横向';
@@ -29,15 +30,30 @@ queueMicrotask(()=>{
     const keyId=e.code||e.key;
     if(e.type==='keydown'){
       // Repeated browser keydown events must not affect held-key state.
+      const releaseGuard=releaseGuards.get(keyId);
+      if(releaseGuard)clearTimeout(releaseGuard);
+      releaseGuards.delete(keyId);
       if(!heldMovementKeys.has(keyId))moveDrone(movement[0],movement[1]*.035);
       heldMovementKeys.set(keyId,movement);
+      heldKeyStartedAt.set(keyId,performance.now());
       heldMotionSteps=0;
       $('#keyboardHint').textContent=`持续移动中 · ${e.code||e.key} · 松开停止`;
       $('#keyboardDebug').textContent=`诊断：收到 keydown ${keyId} · 持续状态已建立`;
     }else{
+      const heldFor=performance.now()-(heldKeyStartedAt.get(keyId)||0);
       heldMovementKeys.delete(keyId);
-      if(!heldMovementKeys.size)$('#keyboardHint').textContent='键盘控制已启用 · W/S 纵向 · A/D 高度 · Q/E 横向';
-      $('#keyboardDebug').textContent=`诊断：收到 keyup ${keyId} · 连续步数 ${heldMotionSteps} · Y ${$('#droneYValue').textContent} m`;
+      heldKeyStartedAt.delete(keyId);
+      if(heldFor>0&&heldFor<80){
+        // Some Windows/embedded shells emit an artificial keyup directly
+        // after keydown. Keep the same key active briefly in that case.
+        heldMovementKeys.set(keyId,movement);
+        releaseGuards.set(keyId,setTimeout(()=>{
+          heldMovementKeys.delete(keyId);
+          releaseGuards.delete(keyId);
+          if(!heldMovementKeys.size)$('#keyboardHint').textContent='键盘控制已启用 · W/S 纵向 · A/D 高度 · Q/E 横向';
+        },1200));
+      }else if(!heldMovementKeys.size){$('#keyboardHint').textContent='键盘控制已启用 · W/S 纵向 · A/D 高度 · Q/E 横向'}
+      $('#keyboardDebug').textContent=`诊断：收到 keyup ${keyId} · 按住 ${heldFor.toFixed(0)} ms · 连续步数 ${heldMotionSteps} · Y ${$('#droneYValue').textContent} m`;
     }
   };
   // Use a single global listener pair. The former overlapping listeners on
